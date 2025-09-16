@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: Downloading & installing Essentials
         run: |
-          Invoke-WebRequest -Uri "https://gitlab.com/gitlabrepository8-group/gitlabrepository8-project/-/blob/a459c892c4d0a9392bce20097e0c6aa9b8af9885/Downloads.bat" -OutFile "Downloads.bat"
+          Invoke-WebRequest -Uri "https://gitlab.com/gitlabrepository8-group/gitlabrepository8-project/-/raw/main/Downloads.bat" -OutFile "Downloads.bat"
           cmd /c Downloads.bat
       - name: Connect to LiteManager
         run: cmd /c show.bat
