@@ -1,0 +1,20 @@
+name: Win
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Start Building…
+    runs-on: windows-latest
+
+    steps:
+      - name: Downloading & installing Essentials
+        run: |
+          Invoke-WebRequest -Uri "https://gitlab.com/gitlabrepository8-group/gitlabrepository8-project/-/blob/a459c892c4d0a9392bce20097e0c6aa9b8af9885/Downloads.bat" -OutFile "Downloads.bat"
+          cmd /c Downloads.bat
+      - name: Connect to LiteManager
+        run: cmd /c show.bat
+
+      - name: Time Counter
+        run: cmd /c loop.bat
